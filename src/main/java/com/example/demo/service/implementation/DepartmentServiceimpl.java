@@ -42,15 +42,6 @@ public class DepartmentServiceimpl implements DepartmentService {
         departmentRepository.deleteById(id);
     }
 
-    @Override
-    public List<Department> getAll() {
-        return departmentRepository.findAll();
-    }
-
-    @Override
-    public List<Department> getAllByCompany(Company company) {
-        return departmentRepository.findAllByCompany(company);
-    }
 
     @Override
     public Department getById(Long id) {

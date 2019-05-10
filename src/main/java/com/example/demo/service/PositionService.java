@@ -18,9 +18,7 @@ public interface PositionService {
 
     void delete(Long id);
 
-    List<Position>findAll();
 
-    List<Position> findAllByDepartmaent(Department department);
 
     Position findById(Long id);
 

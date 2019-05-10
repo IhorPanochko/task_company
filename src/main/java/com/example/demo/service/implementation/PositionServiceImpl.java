@@ -6,6 +6,7 @@ import com.example.demo.entity.Department;
 import com.example.demo.entity.Position;
 import com.example.demo.repository.*;
 import com.example.demo.service.PositionService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,20 +15,13 @@ import java.util.List;
 @Service
 public class PositionServiceImpl implements PositionService {
 
-    @Autowired
-    private CompanyRepository companyRepository;
 
     @Autowired
     private DepartmentRepository departmentRepository;
 
-    @Autowired
-    private PersonRepository personRepository;
 
     @Autowired
     private PositionRepository positionRepository;
-
-    @Autowired
-    private ProjectRepository projectRepository;
 
     @Override
     public void create(PositionDto position) {
@@ -51,15 +45,6 @@ public class PositionServiceImpl implements PositionService {
       positionRepository.deleteById(id);
     }
 
-    @Override
-    public List<Position> findAll() {
-        return positionRepository.findAll();
-    }
-
-    @Override
-    public List<Position> findAllByDepartmaent(Department department) {
-        return positionRepository.findAllByDepartment(department);
-    }
 
     @Override
     public Position findById(Long id) {

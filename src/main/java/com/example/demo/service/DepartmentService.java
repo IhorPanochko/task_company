@@ -17,9 +17,8 @@ public interface DepartmentService {
 
     void delete(Long id);
 
-    List<Department>getAll();
 
-    List<Department>getAllByCompany(Company company);
+
 
     Department getById(Long id);
 

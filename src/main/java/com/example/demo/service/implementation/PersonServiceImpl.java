@@ -55,16 +55,6 @@ public class PersonServiceImpl implements PersonService{
     }
 
     @Override
-    public List<Person> findAll() {
-        return personRepository.findAll();
-    }
-
-    @Override
-    public List<Person> findByProject(Project project) {
-        return personRepository.findAllByProject(project);
-    }
-
-    @Override
     public Person findById(Long id) {
         return personRepository.getOne(id);
     }

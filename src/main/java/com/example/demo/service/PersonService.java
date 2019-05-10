@@ -17,9 +17,7 @@ public interface PersonService {
 
     void delete(Long id);
 
-    List<Person> findAll();
 
-    List<Person> findByProject(Project project);
 
     Person findById(Long id);
 

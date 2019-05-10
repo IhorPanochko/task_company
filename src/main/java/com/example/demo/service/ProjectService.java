@@ -18,13 +18,6 @@ public interface ProjectService {
 
     void delete(Project project);
 
-    List<Project>findAll();
-
-    List<Project> findAllByPerson(Person person);
-
-    List<Project> findAllByCompany(Company company);
-
-    Project findByName(String name);
 
     Project findById(Long id);
 

@@ -15,11 +15,10 @@ public interface CompanyService {
 
     Company findById(Long id);
 
-    Company findByDepartmaent(Department department);
+
 
     void editCompany(CompanyDto company);
 
-    List<Company> getAllCompanies();
 
 
 }

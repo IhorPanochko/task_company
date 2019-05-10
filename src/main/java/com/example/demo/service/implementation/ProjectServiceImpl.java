@@ -19,15 +19,6 @@ public class ProjectServiceImpl implements ProjectService{
     private CompanyRepository companyRepository;
 
     @Autowired
-    private DepartmentRepository departmentRepository;
-
-    @Autowired
-    private PersonRepository personRepository;
-
-    @Autowired
-    private PositionRepository positionRepository;
-
-    @Autowired
     private ProjectRepository projectRepository;
 
 
@@ -52,26 +43,6 @@ public class ProjectServiceImpl implements ProjectService{
     @Override
     public void delete(Project project) {
          projectRepository.delete(project);
-    }
-
-    @Override
-    public List<Project> findAll() {
-        return projectRepository.findAll();
-    }
-
-    @Override
-    public List<Project> findAllByPerson(Person person) {
-        return projectRepository.findAllByPersons(person);
-    }
-
-    @Override
-    public List<Project> findAllByCompany(Company company) {
-        return projectRepository.findAllByCompany(company);
-    }
-
-    @Override
-    public Project findByName(String name) {
-        return projectRepository.findByName(name);
     }
 
     @Override

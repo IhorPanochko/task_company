@@ -32,10 +32,6 @@ public class CompanyServiceImpl implements CompanyService {
         return companyRepository.findById(id).get();
     }
 
-    @Override
-    public Company findByDepartmaent(Department department) {
-        return companyRepository.findByDepartments(department);
-    }
 
     @Override
     public void editCompany(CompanyDto company) {
@@ -46,10 +42,6 @@ public class CompanyServiceImpl implements CompanyService {
         companyRepository.save(company1);
     }
 
-    @Override
-    public List<Company> getAllCompanies() {
-        return companyRepository.findAll();
-    }
 
 
 }
